@@ -1,6 +1,6 @@
 ## PPDM - Delivery
 
-O projeto se trata de um desenvolvimento para as aulas de Programação Para Dispositivos Móveis. Ele tem como objetivo final se tornar um aplicativo funcional para o mercado de entrega de comida.
+O projeto se trata de um desenvolvimento para as aulas de Programação Para Dispositivos Móveis. Ele tem como objetivo final se tornar um aplicativo funcional para o mercado de entrega de delivery.
 
 Passo a Passo para instalação e criação do projeto e suas dependências:
 - npx create-expo-app my-app
