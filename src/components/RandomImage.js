@@ -1,9 +1,9 @@
 import { StyleSheet, Image } from 'react-native';
 
-export default function RandomImage(){
+export default function RandomImage(props){
     return(
         <Image
-            source={require('../../img/snorlax.png')}
+            source={{uri: `https://picsum.photos/id/${props.number}/200`}}
             style = {styles.image}
         />
     )
