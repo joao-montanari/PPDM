@@ -7,7 +7,7 @@ import RandomImage from '../components/RandomImage';
 export default function Home() {
   const navigate = useNavigation()
   const [estado, setEstado] = useState(false)
-  const [randomNum, setRamdomNum] = useState(0)
+  const [randomID, setRamdomID] = useState(0)
 
   function Voltar() {
     navigate.navigate(Login);
@@ -28,9 +28,9 @@ export default function Home() {
         </View>
         <View style={styles.container}>
           {
-            estado? <RandomImage number = {randomNum} /> : null
+            estado? <RandomImage number = {randomID} /> : null
           }
-          <TouchableOpacity onPress={() => {setEstado(!estado), setRamdomNum(Math.floor(Math.random() * (200 - 1) + 1)) }}>
+          <TouchableOpacity onPress={() => {setEstado(!estado), setRamdomID(Math.floor(Math.random() * (200 - 1) + 1)) }}>
             <Image
               source={require('../../img/imageicon.png')}
               style = {styles.imageicon}
