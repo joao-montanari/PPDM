@@ -3,7 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './src/pages/Login';
 import Home from './src/pages/Home';
-import Alerta from './src/pages/Alerta';
+import Aula01 from './src/pages/Aula01';
+import Aula02 from './src/pages/Aula02';
 
 const Pilha = createStackNavigator();
 
@@ -22,8 +23,13 @@ export default function Routers(){
                     options = {{ headerShown: false }}
                 />
                 <Pilha.Screen
-                    name = 'Alerta'
-                    component = {Alerta}
+                    name = 'Aula01'
+                    component = {Aula01}
+                    options = {{ headerShown: false }}
+                />
+                <Pilha.Screen
+                    name = 'Aula02'
+                    component = {Aula02}
                     options = {{ headerShown: false }}
                 />
             </Pilha.Navigator>

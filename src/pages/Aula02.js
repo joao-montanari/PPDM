@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Home from './Home';
 
-export default function Alerta(){
+export default function Aula02(){
     const navigate = useNavigation()
 
     function Voltar(){
@@ -23,13 +23,13 @@ export default function Alerta(){
                 </Text>
             </View>
             <View style = {styles.container}>
-                <TouchableOpacity>
-                    <Text>
+                <TouchableOpacity style = {styles.btnteste}>
+                    <Text style = {styles.textteste}>
                         TESTE
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text>
+                <TouchableOpacity style = {styles.btnalerta}>
+                    <Text style = {styles.textalerta}>
                         ALERTA
                     </Text>
                 </TouchableOpacity>
@@ -67,6 +67,29 @@ const styles = StyleSheet.create({
         height: 20,
     },
     btnteste: {
-        
+        textAlign: 'center',
+        justifyContent: 'center',
+        margin: 10,
+        backgroundColor: '#1b98e0',
+        borderRadius: 10,
+        height: 40
+    },
+    textteste: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 'large'
+    },
+    btnalerta: {
+        textAlign: 'center',
+        justifyContent: 'center',
+        margin: 10,
+        backgroundColor: 'orange',
+        borderRadius: 10,
+        height: 40
+    },
+    textalerta: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 'large'
     }
 })
