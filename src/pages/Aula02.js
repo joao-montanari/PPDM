@@ -1,12 +1,17 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, Alert, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Home from './Home';
+import Login from './Login';
 
-export default function Aula02(){
+export default function Aula02({orientation}){
     const navigate = useNavigation()
 
     function Voltar(){
         navigate.navigate(Home);
+    }
+
+    function deslogar(){
+        navigate.navigate(Login);
     }
 
     return(
@@ -28,12 +33,17 @@ export default function Aula02(){
                         TESTE
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style = {styles.btnalerta}>
-                    <Text style = {styles.textalerta}>
-                        ALERTA
-                    </Text>
-                </TouchableOpacity>
+                <Button
+                    title='SAIR'
+                    style = {styles.btnalerta}
+                    onPress={Alert.alert('Aviso', 'deseja realmente sair do app?', [
+                        {text: 'não'},
+                        {text: 'sim', onPress: () => deslogar()}
+                    ])
+                    }
+                />
             </View>
+            <View style={{backgroundColor: orientation === 'portrait' ? 'blue' : 'red', flex: 0.5}} />
         </>
     )
 }

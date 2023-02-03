@@ -9,4 +9,5 @@ Passo a Passo para instalação e criação do projeto e suas dependências:
 - npm install react-router-dom
 - npm install @react-navigation/native
 - npm install @react-navigation/stack
+- npm install @react-native-community/hooks
 - **npm start**
