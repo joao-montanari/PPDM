@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import Login from './Login';
+import Alerta from './Alerta';
 import RandomImage from '../components/RandomImage';
 
 export default function Home() {
@@ -11,6 +12,10 @@ export default function Home() {
 
   function Voltar() {
     navigate.navigate(Login);
+  }
+
+  function chamadaAlerta(){
+    navigate.navigate(Alerta);
   }
 
   return (
@@ -23,7 +28,7 @@ export default function Home() {
             />
           </TouchableOpacity>
           <Text style = {styles.textheader}>
-            Área Interna
+            Home
           </Text>
         </View>
         <View style={styles.container}>
@@ -37,13 +42,18 @@ export default function Home() {
             />
           </TouchableOpacity>
         </View>
+        <TouchableOpacity style = {styles.btn} onPress = {() => chamadaAlerta()}>
+          <Text style = {styles.btntext}>
+            AULA 02
+          </Text>
+        </TouchableOpacity>
       </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.94,
+    flex: 0.88,
     backgroundColor: '#efeef5',
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,5 +84,17 @@ const styles = StyleSheet.create({
   imageicon: {
     width: 100,
     height: 100
+  },
+  btn: {
+    flex: 0.06,
+    textAlign: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1b98e0',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10
+  },
+  btntext: {
+    color: 'white',
+    fontWeight: 'bold'
   }
 });
