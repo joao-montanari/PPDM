@@ -5,6 +5,7 @@ import Login from './src/pages/Login';
 import Home from './src/pages/Home';
 import Aula01 from './src/pages/Aula01';
 import Aula02 from './src/pages/Aula02';
+import Aula03 from './src/pages/Aula03';
 
 const Pilha = createStackNavigator();
 
@@ -31,6 +32,11 @@ export default function Routers(orientation){
                     name = 'Aula02'
                     component = {Aula02}
                     options = {{ headerShown: false, orientation}}
+                />
+                <Pilha.Screen
+                    name = 'Aula03'
+                    component = {Aula03}
+                    options = {{ headerShown: false }}
                 />
             </Pilha.Navigator>
         </NavigationContainer>
