@@ -1,4 +1,6 @@
-## PPDM - Delivery
+## PPDM
+
+**Dia da aula na semana:** sexta-feira
 
 O projeto se trata de um desenvolvimento para as aulas de Programação Para Dispositivos Móveis. Ele tem como objetivo final se tornar um aplicativo com todas as atividades propostas no decorrer das aulas de PPDM.
 
