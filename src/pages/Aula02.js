@@ -30,11 +30,11 @@ export default function Aula02({orientation}){
             <View style = {styles.container}>
                 <TouchableOpacity style = {styles.btnteste}>
                     <Text style = {styles.textteste}>
-                        TESTE
+                        PC
                     </Text>
                 </TouchableOpacity>
                 <Button
-                    title='SAIR'
+                    title='CELULAR'
                     style = {styles.btnalerta}
                     onPress={Alert.alert('Aviso', 'deseja realmente sair do app?', [
                         {text: 'não'},
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         margin: 10,
         backgroundColor: 'orange',
         borderRadius: 10,
-        height: 40
+        height: 40,
     },
     textalerta: {
         color: 'white',

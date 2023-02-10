@@ -3,26 +3,15 @@ import { useNavigation } from '@react-navigation/native';
 import Login from './Login';
 import Aula01 from './Aula01';
 import Aula02 from './Aula02';
+import Aula03 from './Aula03';
 
 export default function Home(){
     const navigate = useNavigation()
 
-    function Voltar(){
-        navigate.navigate(Login);
-    }
-
-    function chamadaAula01(){
-        navigate.navigate(Aula01);
-    }
-    
-      function chamadaAula02(){
-        navigate.navigate(Aula02);
-    }
-
     return(
         <>
             <View style = {styles.header}>
-                <TouchableOpacity style = {styles.btnvoltar} onPress = {() => Voltar()}>
+                <TouchableOpacity style = {styles.btnvoltar} onPress = {() => { navigate.navigate(Login) }}>
                     <Image
                         source={require('../../img/seta.png')}
                         style = {styles.voltar}
@@ -33,14 +22,19 @@ export default function Home(){
                 </Text>
             </View>
             <View style = {styles.container}>
-                <TouchableOpacity style = {styles.btn} onPress = {() => chamadaAula01()}>
+                <TouchableOpacity style = {styles.btn} onPress = {() => { navigate.navigate(Aula01) }}>
                     <Text style = {styles.btntext}>
                         AULA 01
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style = {styles.btn} onPress = {() => chamadaAula02()}>
+                <TouchableOpacity style = {styles.btn} onPress = {() => { navigate.navigate(Aula02) }}>
                     <Text style = {styles.btntext}>
                         AULA 02
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style = {styles.btn} onPress = {() => { navigate.navigate(Aula03) }}>
+                    <Text style = {styles.btntext}>
+                        AULA 03
                     </Text>
                 </TouchableOpacity>
             </View>

@@ -3,29 +3,16 @@ import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import Home from './Home';
 import RandomImage from '../components/RandomImage';
+import Header from '../components/Header';
 
 export default function Aula01() {
   const navigate = useNavigation()
   const [estado, setEstado] = useState(false)
   const [randomID, setRamdomID] = useState(0)
 
-  function Voltar() {
-    navigate.navigate(Home);
-  }
-
   return (
       <>
-        <View style = {styles.header}>
-          <TouchableOpacity style = {styles.btnvoltar} onPress = {() => Voltar()}>
-            <Image
-              source={require('../../img/seta.png')}
-              style = {styles.voltar}
-            />
-          </TouchableOpacity>
-          <Text style = {styles.textheader}>
-            Aula 01
-          </Text>
-        </View>
+        <Header/>
         <View style={styles.container}>
           {
             estado? <RandomImage number = {randomID} /> : null
